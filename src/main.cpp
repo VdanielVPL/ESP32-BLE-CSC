@@ -98,5 +98,5 @@ void setup() {
 }
 
 void loop() {
-
+	vTaskDelete(NULL);	// cala praca dzieje sie w timerze i tasku - usun task Arduino zamiast krecic pusta petla
 }
