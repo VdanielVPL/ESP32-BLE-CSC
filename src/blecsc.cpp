@@ -72,8 +72,6 @@ void BLE_init() {
 	uint16_t featFlags = 0x0003;
 	pFeature->setValue((uint8_t*)&featFlags, 2);
 
-	csc->start();
-
 	NimBLEAdvertising *adv = server->getAdvertising();
     adv->addServiceUUID(CSC_SERVICE_UUID);
     adv->setName("ESP Rowerek");
