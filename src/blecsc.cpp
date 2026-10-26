@@ -1,9 +1,9 @@
 #include "blecsc.h"
 #include <NimBLEDevice.h>
 
-#define CSC_SERVICE_UUID "1816"  	// UUID dla Cycling Speed and Cadence Service
-#define CSC_MEASUREMENT_UUID "2A5B" // UUID dla CSC Measurement
-#define CSC_FEATURE_UUID "2A5C"     // UUID dla CSC Feature
+#define CSC_SERVICE_UUID "1816"		// UUID dla Cycling Speed and Cadence Service
+#define CSC_MEASUREMENT_UUID "2A5B"	// UUID dla CSC Measurement
+#define CSC_FEATURE_UUID "2A5C"		// UUID dla CSC Feature
 #define DEVICE_NAME "ESP Rowerek"
 #define APPEARANCE_SPEED_CADENCE 0x0485	// Cycling: Speed and Cadence Sensor
 
@@ -37,13 +37,13 @@ void BLE_init() {
 
 	// Charakterystyka dla pomiarów
 	pMeasurement = csc->createCharacteristic(
-		CSC_MEASUREMENT_UUID,  		// UUID dla CSC Measurement
+		CSC_MEASUREMENT_UUID,	// UUID dla CSC Measurement
 		NIMBLE_PROPERTY::NOTIFY
 	);
 
 	// Charakterystyka dla funkcji
 	NimBLECharacteristic *pFeature = csc->createCharacteristic(
-		CSC_FEATURE_UUID,  			// UUID dla CSC Feature
+		CSC_FEATURE_UUID,		// UUID dla CSC Feature
 		NIMBLE_PROPERTY::READ
 	);
 

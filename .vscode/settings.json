@@ -1,6 +1,5 @@
 {
     "files.associations": {
-        "new": "cpp",
-        "*.cppsdadsad": "cpp"
+        "new": "cpp"
     }
 }
