@@ -1,5 +1,5 @@
 # pyright: reportUndefinedVariable=false
 Import("env")
 
-# NimBLE-Arduino: niezgodny typ is_ble_hs_resolv_enabled (błąd biblioteki)
+# NimBLE-Arduino: is_ble_hs_resolv_enabled type mismatch (library bug)
 env.Append(LINKFLAGS=["-Wno-lto-type-mismatch"])
